@@ -72,6 +72,9 @@ namespace Student_Portal
         public void SaveAdminDetails(TextBox FnameTxt, TextBox LnameTxt, ComboBox GenderTxt, TextBox IdNumberTxt, TextBox NationalityTxt,
             DatePicker DOBTxt, TextBox AddressTxt, TextBox NumberTxt, DatePicker DateOfRegTxt)
         {
+
+            //System.Data.SqlClient.SqlException: 'Violation of PRIMARY KEY constraint
+            //'PK__admin_de__3214EC074B45949E'. Cannot insert duplicate key in object 'dbo.admin_details'. The duplicate key value is (1).
             con.Open();     //Open Connection to the database
 
             //Store user personal details in the database
@@ -104,6 +107,22 @@ namespace Student_Portal
             }
 
             return Invalid;
+        }
+
+        public bool AdmnAccExist()
+        {
+            //System.InvalidOperationException
+
+            con.Open();     //Open connection
+
+            string sqlText = "SELECT user_logins.username FROM user_logins JOIN user_details ON user_details.id = user_logins.id WHERE username LIKE 'adm%'";
+            cmd = new SqlCommand(sqlText, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            bool dataReader = dr.Read();
+            con.Close();
+
+            return dataReader;
         }
 
         #endregion

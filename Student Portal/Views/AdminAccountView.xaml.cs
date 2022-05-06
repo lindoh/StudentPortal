@@ -53,7 +53,6 @@ namespace Student_Portal.Views
 
                 //If storing to database is successful
                 MessageBox.Show("Account Successfully Updated", "Update Successful", MessageBoxButton.OK, MessageBoxImage.Information);
-                Home.AdminValid = true;
 
                 clearTextBoxes();
 

@@ -1,17 +1,6 @@
 ﻿using Student_Portal.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace Student_Portal
 {
@@ -20,15 +9,20 @@ namespace Student_Portal
     /// </summary>
     public partial class HomeScreen : Window
     {
+        /***********TO DO
+         *CREATE A FLAG TO CONTROL THE BUTTONS 
+         */
+
+        SqlDatabase SqlDB = new SqlDatabase();
+
         public HomeScreen()
         {
             InitializeComponent();
             DataContext = new HomeViewModel();
-
-            
         }
 
-        public bool AdminValid = false;
+    
+        
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -38,7 +32,7 @@ namespace Student_Portal
 
         private void CreateUserBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (AdminValid)
+            if (SqlDB.AdmnAccExist())
             {
                 DataContext = new CreateUserAccountViewModel();
                 SelectedItemLbl.Content = "Create New User Account";
@@ -47,7 +41,7 @@ namespace Student_Portal
 
         private void UpdateUserBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (AdminValid)
+            if (SqlDB.AdmnAccExist())
             {
                 DataContext = new UpdateUserAccountViewModel();
                 SelectedItemLbl.Content = "Update User Account";
@@ -56,7 +50,7 @@ namespace Student_Portal
 
         private void DeleteUserBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (AdminValid)
+            if (SqlDB.AdmnAccExist())
             {
                 DataContext = new DeleteUserAccountViewModel();
                 SelectedItemLbl.Content = "Delete User Account";
