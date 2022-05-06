@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="Student_Portal.Views.CreateUserAccountView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Student_Portal.Views"
+             mc:Ignorable="d" d:DesignWidth="700" Height="500">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="First Name" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <TextBox Grid.Row="1" Grid.Column="0" x:Name="FnameTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" TextWrapping="Wrap" FontWeight="Normal"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="Last Name" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <TextBox Grid.Row="1" Grid.Column="2" x:Name="LnameTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" TextWrapping="Wrap" FontWeight="Normal"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Gender" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <ComboBox Grid.Row="3" Grid.Column="0" x:Name="GenderTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" FontWeight="Normal">
+            <ComboBoxItem Content="Male"/>
+            <ComboBoxItem Content="Female"/>
+        </ComboBox>
+        <Label Grid.Row="2" Grid.Column="2" Content="ID Number" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <TextBox Grid.Row="3" Grid.Column="2" x:Name="IdNumberTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" TextWrapping="Wrap" FontWeight="Normal"/>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Nationality" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <TextBox Grid.Row="5" Grid.Column="0" x:Name="NationalityTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" TextWrapping="Wrap" FontWeight="Normal"/>
+        <Label Grid.Row="4" Grid.Column="2" Content="Date of Birth" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <DatePicker Grid.Row="5" Grid.Column="2" x:Name="DOBTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" FontWeight="Normal"/>
+
+        <Label Grid.Row="6" Grid.Column="0" Content="Physical Address" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <TextBox Grid.Row="7" Grid.ColumnSpan="3" x:Name="AddressTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" TextWrapping="Wrap" FontWeight="Normal"/>
+
+        <Label Grid.Row="8" Grid.Column="0" Content="Phone Number" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <TextBox Grid.Row="9" Grid.Column="0" x:Name="NumberTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" TextWrapping="Wrap" FontWeight="Normal"/>
+        <Label Grid.Row="8" Grid.Column="2" Content="Date of Registration" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <DatePicker Grid.Row="9" Grid.Column="2" x:Name="DateOfRegTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" FontWeight="Normal"/>
+
+        <Label Grid.Row="10" Grid.Column="0" Content="Student/Lecture" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <ComboBox Grid.Row="11" Grid.Column="0" x:Name="Stud_Lec_CBox" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" FontWeight="Normal">
+            <ComboBoxItem Content="Student"></ComboBoxItem>
+            <ComboBoxItem Content="Lecture"></ComboBoxItem>
+        </ComboBox>
+
+        <Label Grid.Row="10" Grid.Column="2" Content="Course Name" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <ComboBox Grid.Row="11" Grid.Column="2" x:Name="CourseNameCBox" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" FontWeight="Normal">
+            <ComboBoxItem Content="Electronic Engineering"></ComboBoxItem>
+            <ComboBoxItem Content="Civil Engineering"></ComboBoxItem>
+            <ComboBoxItem Content="Chemical Engineering"></ComboBoxItem>
+            <ComboBoxItem Content="Supply Chain Management"></ComboBoxItem>
+        </ComboBox>
+
+        <Label Grid.Row="12" Grid.Column="3" Content="Generated Username" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <Button Grid.Row="13" Grid.Column="0" Name="GenUsernameBtn" Content="Generate Username" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Background="White" Foreground="#FF7456A9" BorderBrush="#FF7456A9" Cursor="Hand" Click="GenUsernameBtn_Click"/>
+        <TextBox Grid.Row="13" Grid.Column="2" x:Name="GenUsernameTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" TextWrapping="Wrap" FontWeight="Normal"/>
+        <Label Grid.Row="14" Grid.Column="3" Content="Temporary Password" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Foreground="#FFA4A5A9" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <Button Grid.Row="15" Grid.Column="0" Name="GenPasswordBtn" Content="Generate Password" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Background="White" Foreground="#FF7456A9" BorderBrush="#FF7456A9" Cursor="Hand" Click="GenPasswordBtn_Click"/>
+        <PasswordBox Grid.Row="15" Grid.Column="2" x:Name="GenPasswordTxt" FontFamily="Nirmula UI" FontSize="14" FontStyle="Normal" Background="#FFE6E7E9" FontWeight="Normal"/>
+
+        <Button Grid.Row="16" Grid.RowSpan="2" Grid.ColumnSpan="3" Margin="100,9.6,100,0.4" Name="RegisterBtn" Content="REGISTER" FontFamily="Nirmula UI" FontSize="12" FontStyle="Normal" Background="#FF7456A9" Foreground="White" BorderBrush="White" Cursor="Hand" Click="RegisterBtn_Click"/>
+    </Grid>
+</UserControl>

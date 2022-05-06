@@ -1,0 +1,56 @@
+﻿<Window x:Name="HomeScreenForm" x:Class="Student_Portal.HomeScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Student_Portal"
+        xmlns:viewmodels="clr-namespace:Student_Portal.ViewModels"
+        xmlns:views="clr-namespace:Student_Portal.Views"
+        mc:Ignorable="d"
+        Title="Admin Panel" Height="590" Width="1015" MinHeight="450" MinWidth="800">
+
+    <Window.Resources>
+        <DataTemplate x:Name="HomeViewTemplate" DataType="{x:Type viewmodels:HomeViewModel}">
+            <views:HomeView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CreateUserAccountViewTemplate" DataType="{x:Type viewmodels:CreateUserAccountViewModel}">
+            <views:CreateUserAccountView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="UpdateUserAccountViewTemplate" DataType="{x:Type viewmodels:UpdateUserAccountViewModel}">
+            <views:UpdateUserAccountView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DeleteUserAccountViewTemplate" DataType="{x:Type viewmodels:DeleteUserAccountViewModel}">
+            <views:DeleteUserAccountView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="AdminAccountViewTemplate" DataType="{x:Type viewmodels:AdminAccontViewModel}">
+            <views:AdminAccountView DataContext="{Binding}"/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <DockPanel>
+        <StackPanel Width="250" Background="#2a2b2b" >
+
+            <Button Name="HomeBtn"  Content="Home" HorizontalContentAlignment="Left" Padding="10,10,0,10" FontFamily="Nirmula UI" FontSize="18" FontWeight="Normal" Foreground="White" Background="Transparent" BorderBrush="#1b1c1c" Cursor="Hand" Click="HomeBtn_Click"/>
+            <Button Name="CreateUserBtn"  Content="Create User Account" HorizontalContentAlignment="Left" Padding="10,10,0,10" FontFamily="Nirmula UI" FontSize="18" FontWeight="Normal" Foreground="White" Background="Transparent" BorderBrush="#1b1c1c" Cursor="Hand" Click="CreateUserBtn_Click"/>
+            <Button Name="UpdateUserBtn"  Content="Update User Account" HorizontalContentAlignment="Left" Padding="10,10,0,10" FontFamily="Nirmula UI" FontSize="18" FontWeight="Normal" Foreground="White" Background="Transparent" BorderBrush="#1b1c1c" Cursor="Hand" Click="UpdateUserBtn_Click"/>
+            <Button Name="DeleteUserBtn"  Content="Delete User Account" HorizontalContentAlignment="Left" Padding="10,10,0,10" FontFamily="Nirmula UI" FontSize="18" FontWeight="Normal" Foreground="White" Background="Transparent" BorderBrush="#1b1c1c" Cursor="Hand" Click="DeleteUserBtn_Click"/>
+            <Button Name="UpdateAdminBtn"  Content="Update Admin Account" HorizontalContentAlignment="Left" Padding="10,10,0,10" FontFamily="Nirmula UI" FontSize="18" FontWeight="Normal" Foreground="White" Background="Transparent" BorderBrush="#1b1c1c" Cursor="Hand" Click="UpdateAdminBtn_Click"/>
+            <Button Name="SettingsBtn"  Content="Settings" HorizontalContentAlignment="Left" Padding="10,10,0,10" FontFamily="Nirmula UI" FontSize="18" FontWeight="Normal" Foreground="White" Background="Transparent" BorderBrush="#1b1c1c" Cursor="Hand"/>
+        </StackPanel>
+        <StackPanel Name="SelectedItemPanel">
+            <Grid Background="#c2d1c6" Height="44">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="127*"/>
+                    <ColumnDefinition Width="226*"/>
+                    <ColumnDefinition Width="27*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Name="SelectedItemLbl" Content="Home" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Nirmula UI" FontSize="18" FontWeight="Bold" Foreground="#FF7456A9"/>
+                <Label Grid.Column="1" Name="ProfileLbl" Content="Lindokuhle Gamede" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0.8,0" FontFamily="Nirmula UI" FontSize="18" FontWeight="Bold" Foreground="#FF7456A9"/>
+                <Image Grid.Column="2" Margin="5.2,10,10.2,10" VerticalAlignment="Center" HorizontalAlignment="Center" Source="D:\Engineering work\C# Repository\Student Portal\Student Portal\bin\Debug\ProfilePicIcon.png" Width="39"/>
+            </Grid>
+            <ContentControl Content="{Binding}"/>
+        </StackPanel>
+    </DockPanel>
+
+
+</Window>

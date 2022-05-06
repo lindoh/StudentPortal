@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[admin_details]
+(
+	[Id] INT NOT NULL PRIMARY KEY,
+	[Fname] NVARCHAR(50) NOT NULL,
+	[Lname] NVARCHAR(50) NOT NULL,
+	[Gender] NVARCHAR(6) NOT NULL,
+	[IdNumber] NCHAR(13) NOT NULL,
+	[Nationality] NVARCHAR(50) NOT NULL,
+	[DOB] DATE NOT NULL,
+	[Address] NVARCHAR(100) NOT NULL,
+	[PhoneNumber] NVARCHAR(15) NOT NULL,
+	[DateOfReg] DATE NOT NULL,
+)
